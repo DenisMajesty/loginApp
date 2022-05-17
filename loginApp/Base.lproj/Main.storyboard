@@ -1,24 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RG" translatesAutoresizingMaskIntoConstraints="NO" id="478-oM-8yH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="27" translatesAutoresizingMaskIntoConstraints="NO" id="d4u-s8-811">
+                                <rect key="frame" x="15" y="114" width="384" height="213.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ank-3F-uuK">
+                                        <rect key="frame" x="57" y="0.0" width="270" height="83"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bq1-wc-mMw">
+                                                <rect key="frame" x="0.0" y="0.0" width="270" height="34"/>
+                                                <color key="backgroundColor" red="0.55835002659999999" green="0.62346547839999999" blue="0.62745350600000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="270" id="t5y-4d-qRu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cCk-GV-EoJ">
+                                                <rect key="frame" x="0.0" y="49" width="270" height="34"/>
+                                                <color key="backgroundColor" red="0.55835002659999999" green="0.62346547839999999" blue="0.62745350600000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dt-a7-EXr">
+                                        <rect key="frame" x="140" y="110" width="104.5" height="46"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Login">
+                                            <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="25"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="loginPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="aec-lL-To3"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="HNL-I3-dF8">
+                                        <rect key="frame" x="20" y="183" width="344" height="30.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hW-ob-oWf">
+                                                <rect key="frame" x="0.0" y="0.0" width="162" height="30.5"/>
+                                                <buttonConfiguration key="configuration" style="plain" subtitle="" titleAlignment="automatic">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Forgot User Name?">
+                                                            <attributes>
+                                                                <font key="NSFont" size="13" name="Chalkduster"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrY-03-KTb">
+                                                <rect key="frame" x="182" y="0.0" width="162" height="30.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="Forgot Password?">
+                                                            <attributes>
+                                                                <font key="NSFont" size="13" name="Chalkduster"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="478-oM-8yH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="9PX-yf-nC2"/>
+                            <constraint firstAttribute="bottom" secondItem="478-oM-8yH" secondAttribute="bottom" id="9zs-KP-QPD"/>
+                            <constraint firstItem="478-oM-8yH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hkw-yR-7Tc"/>
+                            <constraint firstItem="478-oM-8yH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ufa-XP-AFc"/>
+                            <constraint firstItem="d4u-s8-811" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="j7j-oh-6Ra"/>
+                            <constraint firstItem="d4u-s8-811" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="15" id="kSd-ir-Po4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="d4u-s8-811" secondAttribute="trailing" constant="15" id="wB9-HC-VZM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordtextFeild" destination="cCk-GV-EoJ" id="efH-uU-SGD"/>
+                        <outlet property="userNameTextField" destination="bq1-wc-mMw" id="pNo-jG-al3"/>
+                        <segue destination="RE6-HM-ylb" kind="presentation" identifier="segueWelcomeVC" id="iiM-PQ-YLB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="jfJ-Yx-khd">
+            <objects>
+                <viewController id="RE6-HM-ylb" customClass="WelcomeViewController" customModule="loginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YC2-Cq-VJN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RG" translatesAutoresizingMaskIntoConstraints="NO" id="28x-Xl-xU3">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YQN-uS-jad">
+                                <rect key="frame" x="119.5" y="85" width="175" height="25.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tn-I0-8wl">
+                                        <rect key="frame" x="0.0" y="0.0" width="99.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obc-rf-WMJ">
+                                        <rect key="frame" x="115.5" y="0.0" width="59.5" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                        <color key="textColor" systemColor="linkColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ygn-7m-Iuu">
+                                <rect key="frame" x="155.5" y="240.5" width="103.5" height="39.5"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout">
+                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VUb-ft-Pvv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YQN-uS-jad" firstAttribute="top" secondItem="VUb-ft-Pvv" secondAttribute="top" constant="85" id="5QI-4i-LaE"/>
+                            <constraint firstItem="YQN-uS-jad" firstAttribute="centerX" secondItem="28x-Xl-xU3" secondAttribute="centerX" id="6e3-n2-j1O"/>
+                            <constraint firstItem="28x-Xl-xU3" firstAttribute="top" secondItem="Ygn-7m-Iuu" secondAttribute="bottom" constant="-280" id="9gl-kA-uPL"/>
+                            <constraint firstItem="28x-Xl-xU3" firstAttribute="top" secondItem="YC2-Cq-VJN" secondAttribute="top" id="Ifc-IE-QlE"/>
+                            <constraint firstItem="28x-Xl-xU3" firstAttribute="trailing" secondItem="VUb-ft-Pvv" secondAttribute="trailing" id="cgR-HJ-aqo"/>
+                            <constraint firstAttribute="bottom" secondItem="28x-Xl-xU3" secondAttribute="bottom" id="e4P-0p-XpN"/>
+                            <constraint firstItem="Ygn-7m-Iuu" firstAttribute="centerX" secondItem="28x-Xl-xU3" secondAttribute="centerX" id="oSK-8x-c8z"/>
+                            <constraint firstItem="28x-Xl-xU3" firstAttribute="leading" secondItem="VUb-ft-Pvv" secondAttribute="leading" id="tQs-lQ-oGX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="Obc-rf-WMJ" id="J1D-vK-m1c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TXN-mR-UOb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="875.36231884057975" y="136.60714285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="RG" width="1080" height="2076"/>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
