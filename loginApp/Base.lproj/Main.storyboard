@@ -32,13 +32,19 @@
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="750" constant="270" id="t5y-4d-qRu"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="elL-vS-0EE"/>
+                                                </connections>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cCk-GV-EoJ">
                                                 <rect key="frame" x="0.0" y="49" width="270" height="34"/>
                                                 <color key="backgroundColor" red="0.55835002659999999" green="0.62346547839999999" blue="0.62745350600000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="H5n-Ba-Slv"/>
+                                                </connections>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -57,30 +63,22 @@
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3hW-ob-oWf">
                                                 <rect key="frame" x="0.0" y="0.0" width="162" height="30.5"/>
-                                                <buttonConfiguration key="configuration" style="plain" subtitle="" titleAlignment="automatic">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Forgot User Name?">
-                                                            <attributes>
-                                                                <font key="NSFont" size="13" name="Chalkduster"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?" subtitle="" titleAlignment="automatic">
+                                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="13"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="helpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EEk-Hp-ub1"/>
+                                                </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrY-03-KTb">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrY-03-KTb">
                                                 <rect key="frame" x="182" y="0.0" width="162" height="30.5"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain">
-                                                    <attributedString key="attributedTitle">
-                                                        <fragment content="Forgot Password?">
-                                                            <attributes>
-                                                                <font key="NSFont" size="13" name="Chalkduster"/>
-                                                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                            </attributes>
-                                                        </fragment>
-                                                    </attributedString>
+                                                <buttonConfiguration key="configuration" style="plain" title="Forgot Password?">
+                                                    <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="13"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="helpPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f7L-F4-8J1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -120,8 +118,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RG" translatesAutoresizingMaskIntoConstraints="NO" id="28x-Xl-xU3">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YQN-uS-jad">
-                                <rect key="frame" x="119.5" y="85" width="175" height="25.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="YQN-uS-jad">
+                                <rect key="frame" x="122" y="85" width="170" height="25.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Tn-I0-8wl">
                                         <rect key="frame" x="0.0" y="0.0" width="99.5" height="25.5"/>
@@ -130,7 +128,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Obc-rf-WMJ">
-                                        <rect key="frame" x="115.5" y="0.0" width="59.5" height="25.5"/>
+                                        <rect key="frame" x="110.5" y="0.0" width="59.5" height="25.5"/>
                                         <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                         <color key="textColor" systemColor="linkColor"/>
                                         <nil key="highlightedColor"/>
@@ -143,6 +141,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Logout">
                                     <fontDescription key="titleFontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="NGy-fc-Bwc" kind="unwind" unwindAction="unwindSegueWithSegue:" id="mBG-Cf-vtk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="VUb-ft-Pvv"/>
@@ -163,6 +164,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TXN-mR-UOb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="NGy-fc-Bwc" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="875.36231884057975" y="136.60714285714286"/>
         </scene>
